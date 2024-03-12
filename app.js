@@ -1,15 +1,15 @@
 console.log("it works");
 
-const searchBtnEl = document.querySelector(".searchBtn");
 const containerEl = document.querySelector(".container");
 const countriesContainer = document.querySelector(".countries");
+const inputEl = document.querySelector(".search");
+const searchBtnEl = document.querySelector(".searchBtn");
 
 const fetchCountries = async () => {
   try {
     const res = await fetch("https://restcountries.com/v3.1/all");
     const data = await res.json();
     console.log(data);
-
     return data;
   } catch (error) {
     console.error(error);
